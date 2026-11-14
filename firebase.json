@@ -1,0 +1,30 @@
+{
+  "database": {
+    "rules": "database.rules.json"
+  },
+  "hosting": {
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      "_backup_before_audit/**",
+      "_backup_security_audit/**",
+      "_backup_env_migration/**",
+      ".env",
+      ".env.*",
+      "database.rules.json",
+      "seed.json",
+      "scratch/**",
+      "build.js",
+      "package*.json"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
+

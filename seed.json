@@ -1,0 +1,189 @@
+{
+  "users": {
+    "seed_principal_uid": {
+      "role": "principal",
+      "name": "Dr. Eleanor Vance",
+      "email": "principal@centre.com"
+    },
+    "seed_teacher_uid": {
+      "role": "teacher",
+      "name": "Sarah Jenkins",
+      "email": "sarah.teacher@apex.local",
+      "teacherId": "seed_teacher_uid"
+    },
+    "seed_student_uid": {
+      "role": "student",
+      "name": "Ananya Kumar",
+      "studentId": "S101",
+      "email": "s101@student.local"
+    }
+  },
+  "batches": {
+    "b_10_sci": {
+      "capacity": 25,
+      "fee": 3000,
+      "grade": "10",
+      "name": "Class 10 - Science & Maths",
+      "room": "Room 2A",
+      "schedule": "Mon, Wed, Fri 4:30 - 6:30 PM",
+      "subject": "Physics, Chemistry & Mathematics",
+      "teacherId": "seed_teacher_uid"
+    },
+    "b_12_phy": {
+      "capacity": 20,
+      "fee": 3500,
+      "grade": "12",
+      "name": "Class 12 - Advanced Physics",
+      "room": "Room 3B",
+      "schedule": "Tue, Thu, Sat 5:00 - 7:00 PM",
+      "subject": "Physics",
+      "teacherId": "seed_teacher_uid"
+    }
+  },
+  "teachers": {
+    "seed_teacher_uid": {
+      "batchIds": {
+        "b_10_sci": true,
+        "b_12_phy": true
+      },
+      "disabled": false,
+      "email": "sarah.teacher@apex.local",
+      "name": "Sarah Jenkins",
+      "phone": "9876543210",
+      "subjects": "Physics & Mathematics"
+    }
+  },
+  "students": {
+    "S101": {
+      "admissionNo": "S101",
+      "batchIds": {
+        "b_10_sci": true
+      },
+      "dob": "2009-05-14",
+      "gender": "Female",
+      "grade": "10",
+      "guardianName": "Ramesh Kumar",
+      "guardianPhone": "9845012345",
+      "joinedOn": "2026-06-01",
+      "name": "Ananya Kumar",
+      "school": "National Public School",
+      "status": "active"
+    },
+    "S102": {
+      "admissionNo": "S102",
+      "batchIds": {
+        "b_10_sci": true,
+        "b_12_phy": true
+      },
+      "dob": "2008-08-22",
+      "gender": "Male",
+      "grade": "12",
+      "guardianName": "Sunita Sharma",
+      "guardianPhone": "9845098765",
+      "joinedOn": "2026-06-15",
+      "name": "Rohan Sharma",
+      "school": "Delhi Public School",
+      "status": "active"
+    }
+  },
+  "fees": {
+    "S101": {
+      "dueDate": "2026-11-10",
+      "total": 6000,
+      "payments": {
+        "p_sample_1": {
+          "amount": 3000,
+          "date": "2026-10-05",
+          "mode": "UPI",
+          "note": "Term 1 initial payment",
+          "receiptNo": "REC-202610-A9B2"
+        }
+      }
+    },
+    "S102": {
+      "dueDate": "2026-10-20",
+      "total": 7000,
+      "payments": {
+        "p_sample_2": {
+          "amount": 2000,
+          "date": "2026-10-01",
+          "mode": "Cash",
+          "note": "Advance payment",
+          "receiptNo": "REC-202610-C3D4"
+        }
+      }
+    }
+  },
+  "attendance": {
+    "S101": {
+      "2026-10-25": "P",
+      "2026-10-26": "P",
+      "2026-10-27": "L",
+      "2026-10-28": "P"
+    },
+    "S102": {
+      "2026-10-25": "P",
+      "2026-10-26": "A",
+      "2026-10-27": "A",
+      "2026-10-28": "P"
+    }
+  },
+  "assignments": {
+    "a_sample_optics": {
+      "batchId": "b_10_sci",
+      "createdAt": "2026-10-26T10:00:00.000Z",
+      "description": "Solve Ray Optics questions 1 to 15 from Chapter 9. Show all ray diagrams clearly.",
+      "dueDate": "2026-11-05",
+      "maxMarks": 25,
+      "teacherId": "seed_teacher_uid",
+      "title": "Ray Optics & Refraction Problems"
+    },
+    "a_sample_calculus": {
+      "batchId": "b_12_phy",
+      "createdAt": "2026-10-24T09:00:00.000Z",
+      "description": "Problems on integration by parts and differential rate equations.",
+      "dueDate": "2026-10-28",
+      "maxMarks": 30,
+      "teacherId": "seed_teacher_uid",
+      "title": "Calculus in Kinematics"
+    }
+  },
+  "submissions": {
+    "S101": {
+      "a_sample_optics": {
+        "status": "submitted",
+        "submittedAt": "2026-10-27T14:30:00.000Z",
+        "note": "Completed ray diagrams as requested."
+      }
+    },
+    "S102": {
+      "a_sample_calculus": {
+        "status": "rejected",
+        "submittedAt": "2026-10-27T11:00:00.000Z",
+        "reviewedAt": "2026-10-28T09:15:00.000Z",
+        "reviewedBy": "Sarah Jenkins",
+        "feedback": "Step 4 is missing the integration constant. Please correct and resubmit."
+      }
+    }
+  },
+  "warnings": {
+    "S101": {
+      "w_sample_fee": {
+        "type": "fees",
+        "message": "Term 2 tuition balance is due by 10 Nov.",
+        "from": "Accounts Office",
+        "createdAt": "2026-10-25T09:00:00.000Z",
+        "acknowledged": false
+      }
+    },
+    "S102": {
+      "w_sample_att": {
+        "type": "attendance",
+        "message": "Attendance dropped below 75% this week. Please meet class teacher.",
+        "from": "Sarah Jenkins",
+        "createdAt": "2026-10-28T10:30:00.000Z",
+        "acknowledged": false
+      }
+    }
+  }
+}

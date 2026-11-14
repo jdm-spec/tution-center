@@ -1,0 +1,12 @@
+.env
+js/env.js
+node_modules/
+.vite/
+.firebase/
+_backup_before_audit/
+_backup_security_audit/
+_backup_env_migration/
+scratch/
+.DS_Store
+Thumbs.db
+
